@@ -10,7 +10,7 @@ export class HeroService {
 
   async addHero(hero: Hero): Promise<Hero> {
     try {
-      return this.http.post<Hero>('/hero', hero).toPromise();
+      return await this.http.post<Hero>('/hero', hero).toPromise();
     } catch (error) {
       throw error;
     }
